@@ -1,0 +1,10 @@
+package edu.ucentral.common.curso.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="lecciones")
+public class Lecciones {
+
+}

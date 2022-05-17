@@ -1,0 +1,5 @@
+package edu.ucentral.common.curso.model;
+
+public class Lecciones {
+
+}

@@ -1,0 +1,43 @@
+package edu.ucentral.servicio.curso.servicio;
+
+import java.util.Optional;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import edu.ucentral.common.curso.model.TipoCurso;
+import edu.ucentral.commons.service.service.CommonServiceImp;
+
+public class TipoCursoImp extends CommonServiceImp<TipoCurso, TipoCursoRespository> implements TipoCursoService {
+
+	@Override
+	public Iterable<TipoCurso> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Page<TipoCurso> findAll(Pageable pageable) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<TipoCurso> findById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TipoCurso save(TipoCurso entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

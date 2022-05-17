@@ -1,0 +1,36 @@
+package edu.ucentral.common.curso.model;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import edu.ucentral.common.usuario.model.Usuario;
+
+@Entity
+@Table(name="cursos")
+public class Curso implements Serializable{
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Column(name="nombre_curso")
+	private String nombreCurso;
+	@joinColumn(name="tipo_curso")
+	private Long idCurso;
+	@OneToOne
+	private Usuario docente;
+	private int precio;
+	@ManyToMany
+	private List<Usuario> estudiantes;
+	
+	private static final long serialVersionUID = 1L;
+
+}
