@@ -37,9 +37,6 @@ public class Usuario implements Serializable{
 	@Column(name="id_empresa")
 	private String idEmpresa;
 	
-	
-	
-	
 	public Date getFechaNacimiento() {
 		return fechaNacimiento;
 	}

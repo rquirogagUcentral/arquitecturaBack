@@ -17,6 +17,7 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+	
 		<dependency>
 			<groupId>edu.ucentral.common.usuario</groupId>
 			<artifactId>common-usuarios</artifactId>
@@ -35,6 +36,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 	</dependencies>
 
 </project>

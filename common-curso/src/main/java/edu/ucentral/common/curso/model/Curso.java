@@ -1,6 +1,7 @@
 package edu.ucentral.common.curso.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -37,7 +38,7 @@ public class Curso implements Serializable{
 	private String objetivo;
 	private String ubicacion;
 	@OneToOne
-	@JoinColumn(name="id_docente")
+	@JoinColumn(name="id_usuario")
 	private Usuario docente;
 	private int precio;
 	@ManyToMany(fetch = FetchType.LAZY)
@@ -50,7 +51,11 @@ public class Curso implements Serializable{
 	@JoinColumn(name = "curso_id")
 	private List<Leccion> lecciones;
 	
-	
+	public Curso ()
+	{
+		this.estudiantes = new ArrayList<Usuario>();
+		this.lecciones = new ArrayList<Leccion>();
+	}
 	
 	
 	public Long getId() {
@@ -176,8 +181,26 @@ public class Curso implements Serializable{
 		this.lecciones = lecciones;
 	}
 
+	
+	public void addEstudiantes(Usuario estudiante)
+	{
+		estudiantes.add(estudiante);
+	}
 
+	public void addLecciones(Leccion leccion)
+	{
+		lecciones.add(leccion);
+	}
+	
+	public void removeEstudiantes(Usuario estudiante)
+	{
+		estudiantes.remove(estudiante);
+	}
 
+	public void removeLecciones(Leccion leccion)
+	{
+		lecciones.remove(leccion);
+	}
 
 	private static final long serialVersionUID = 1L;
 

@@ -1,6 +1,7 @@
 package edu.ucentral.common.curso.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -30,7 +31,10 @@ public class Leccion implements Serializable{
 	@JoinColumn(name = "leccion_id")
 	private List<Respuesta> respuestas; 
 	
-	
+	public Leccion()
+	{
+		this.respuestas = new ArrayList<Respuesta>();
+	}
 	
 	public Long getId() {
 		return id;
@@ -91,6 +95,15 @@ public class Leccion implements Serializable{
 	}
 
 
+	public void addRespuesta(Respuesta respuesta)
+	{
+		respuestas.add(respuesta);
+	}
+	
+	public void removerRespuesta(Respuesta respuesta)
+	{
+		respuestas.remove(respuesta);
+	}
 
 	private static final long serialVersionUID = 1L;
 
